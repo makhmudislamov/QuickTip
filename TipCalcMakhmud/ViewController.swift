@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var FadeControl: UISegmentedControl!
     
+    @IBOutlet weak var split2Label: UILabel!
+    @IBOutlet weak var split3Label: UILabel!
+    @IBOutlet weak var split4Label: UILabel!
     
 
     override func viewDidLoad() {
@@ -33,12 +36,19 @@ class ViewController: UIViewController {
         
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        split2Label.text = "$0.00"
+        split3Label.text = "$0.00"
+        split4Label.text = "$0.00"
+        
         
         
         let defaults = NSUserDefaults.standardUserDefaults()
         billField.text = defaults.stringForKey("savedField")
         tipLabel.text = defaults.stringForKey("savedTipLabel")
         totalLabel.text = defaults.stringForKey("savedTotalLabel")
+        split2Label.text = defaults.stringForKey("savedS2")
+        split3Label.text = defaults.stringForKey("savedS3")
+        split4Label.text = defaults.stringForKey("savedS4")
         tipControl.selectedSegmentIndex = defaults.integerForKey("savedPercententage")
         
         billField.becomeFirstResponder()
@@ -101,6 +111,9 @@ class ViewController: UIViewController {
         let lastText = billField.text
         let lastTip = tipLabel.text
         let lastTotal = totalLabel.text
+        let lastS2 = split2Label.text
+        let lastS3 = split3Label.text
+        let lastS4 = split4Label.text
         let lastPerc = tipControl.selectedSegmentIndex
         
         
@@ -108,6 +121,11 @@ class ViewController: UIViewController {
         NSUserDefaults.standardUserDefaults().setObject(lastTip, forKey: "savedTipLabel")
         NSUserDefaults.standardUserDefaults().setObject(lastTotal, forKey: "savedTotalLabel")
         NSUserDefaults.standardUserDefaults().setObject(lastPerc, forKey: "savedPercentage")
+        
+        NSUserDefaults.standardUserDefaults().setObject(lastS2, forKey: "savedS2")
+        NSUserDefaults.standardUserDefaults().setObject(lastS3, forKey: "savedS3")
+        NSUserDefaults.standardUserDefaults().setObject(lastS4, forKey: "savedS4")
+        
         
         NSUserDefaults.standardUserDefaults().synchronize()
         
@@ -153,11 +171,24 @@ class ViewController: UIViewController {
         let tip = billAmount * tipPercentage
         let total = billAmount + tip
         
+        let split2Value = total / 2
+        let split3Value = total / 3
+        let split4Value = total / 4
+        
+        
         tipLabel.text = "$\(tip)"
         totalLabel.text = "$\(total)"
+        split2Label.text = "$\(split2Value )"
+        split3Label.text = "$\(split3Value )"
+        split4Label.text = "$\(split4Value )"
+        
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        split2Label.text = String(format: "$%.2f", split2Value)
+        split3Label.text = String(format: "$%.2f", split3Value)
+        split4Label.text = String(format: "$%.2f", split4Value)
+        
     }
 
     @IBAction func onTap(sender: AnyObject) {
