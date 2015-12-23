@@ -14,6 +14,7 @@
 		708AB26B1C125AE700B238E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708AB2691C125AE700B238E2 /* LaunchScreen.storyboard */; };
 		708AB2761C125AE700B238E2 /* TipCalcMakhmudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708AB2751C125AE700B238E2 /* TipCalcMakhmudTests.swift */; };
 		708AB2811C125AE700B238E2 /* TipCalcMakhmudUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708AB2801C125AE700B238E2 /* TipCalcMakhmudUITests.swift */; };
+		70A495121C29CFF4009E9728 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A495111C29CFF4009E9728 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		708AB27C1C125AE700B238E2 /* TipCalcMakhmudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalcMakhmudUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		708AB2801C125AE700B238E2 /* TipCalcMakhmudUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalcMakhmudUITests.swift; sourceTree = "<group>"; };
 		708AB2821C125AE700B238E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70A495111C29CFF4009E9728 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		708AB2541C125AE600B238E2 = {
 			isa = PBXGroup;
 			children = (
+				70A495111C29CFF4009E9728 /* SettingsViewController.swift */,
 				708AB25F1C125AE600B238E2 /* TipCalcMakhmud */,
 				708AB2741C125AE700B238E2 /* TipCalcMakhmudTests */,
 				708AB27F1C125AE700B238E2 /* TipCalcMakhmudUITests */,
@@ -258,6 +261,7 @@
 			files = (
 				708AB2631C125AE600B238E2 /* ViewController.swift in Sources */,
 				708AB2611C125AE600B238E2 /* AppDelegate.swift in Sources */,
+				70A495121C29CFF4009E9728 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +486,7 @@
 				708AB2871C125AE700B238E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		708AB2881C125AE700B238E2 /* Build configuration list for PBXNativeTarget "TipCalcMakhmudTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				708AB28A1C125AE700B238E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		708AB28B1C125AE700B238E2 /* Build configuration list for PBXNativeTarget "TipCalcMakhmudUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				708AB28D1C125AE700B238E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
