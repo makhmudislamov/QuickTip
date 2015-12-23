@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         self.FadeLabel.alpha = 0
         self.FadeControl.alpha = 1
         
+        
+        
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         
@@ -61,7 +63,7 @@ class ViewController: UIViewController {
         tipControl.setTitle("\(lowTitle)%", forSegmentAtIndex: 0)
         tipControl.setTitle("\(medTitle)%", forSegmentAtIndex: 1)
         tipControl.setTitle("\(highTitle)%", forSegmentAtIndex: 2)
-        NSUserDefaults.standardUserDefaults().synchronize()
+        //NSUserDefaults.standardUserDefaults().synchronize()
 
         
         
@@ -109,7 +111,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func onEditingChanged(sender: AnyObject) {
-        let tipPercentages = [0.10, 0.15, 0.2]
+        
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        
+        
+        var tipPercentages = [0.10, 0.15, 0.20]
+        
+     
+        
+     
+        let savedLowTip = defaults.doubleForKey("lowtip")
+        let savedMidTip = defaults.doubleForKey("medtip")
+        let savedHiTip = defaults.doubleForKey("hightip")
+        
+        if savedLowTip > 0.0 && savedMidTip > 0.0 && savedHiTip > 0.0 {
+            
+            tipPercentages = [ savedLowTip, savedMidTip, savedHiTip ]
+        }
+        
+        
         let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         
         let billAmount = NSString(string: billField.text!).doubleValue
