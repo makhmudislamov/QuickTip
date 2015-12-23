@@ -34,6 +34,13 @@ class ViewController: UIViewController {
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        billField.text = defaults.stringForKey("savedField")
+        tipLabel.text = defaults.stringForKey("savedTipLabel")
+        totalLabel.text = defaults.stringForKey("savedTotalLabel")
+        tipControl.selectedSegmentIndex = defaults.integerForKey("savedPercententage")
+        
         billField.becomeFirstResponder()
     }
     
@@ -91,10 +98,18 @@ class ViewController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
        
-        let myText = billField.text
-        let myTip = tipLabel.text
-        let myTotal = totalLabel.text
-        let myPerc = tipControl.selectedSegmentIndex
+        let lastText = billField.text
+        let lastTip = tipLabel.text
+        let lastTotal = totalLabel.text
+        let lastPerc = tipControl.selectedSegmentIndex
+        
+        
+        NSUserDefaults.standardUserDefaults().setObject(lastText, forKey: "savedField")
+        NSUserDefaults.standardUserDefaults().setObject(lastTip, forKey: "savedTipLabel")
+        NSUserDefaults.standardUserDefaults().setObject(lastTotal, forKey: "savedTotalLabel")
+        NSUserDefaults.standardUserDefaults().setObject(lastPerc, forKey: "savedPercentage")
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
         
          print("View will disappear")
         
