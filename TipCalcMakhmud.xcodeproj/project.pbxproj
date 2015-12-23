@@ -14,6 +14,8 @@
 		708AB26B1C125AE700B238E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708AB2691C125AE700B238E2 /* LaunchScreen.storyboard */; };
 		708AB2761C125AE700B238E2 /* TipCalcMakhmudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708AB2751C125AE700B238E2 /* TipCalcMakhmudTests.swift */; };
 		708AB2811C125AE700B238E2 /* TipCalcMakhmudUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708AB2801C125AE700B238E2 /* TipCalcMakhmudUITests.swift */; };
+		709C21731C2B216400EE3E13 /* purple-man-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 709C21721C2B216400EE3E13 /* purple-man-hi.png */; };
+		709C21771C2B28CB00EE3E13 /* tipping_1492673c.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 709C21761C2B28CB00EE3E13 /* tipping_1492673c.jpg */; };
 		70A495121C29CFF4009E9728 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A495111C29CFF4009E9728 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		708AB27C1C125AE700B238E2 /* TipCalcMakhmudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalcMakhmudUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		708AB2801C125AE700B238E2 /* TipCalcMakhmudUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalcMakhmudUITests.swift; sourceTree = "<group>"; };
 		708AB2821C125AE700B238E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		709C21721C2B216400EE3E13 /* purple-man-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-man-hi.png"; sourceTree = "<group>"; };
+		709C21761C2B28CB00EE3E13 /* tipping_1492673c.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tipping_1492673c.jpg; sourceTree = "<group>"; };
 		70A495111C29CFF4009E9728 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +107,8 @@
 				708AB2601C125AE600B238E2 /* AppDelegate.swift */,
 				708AB2621C125AE600B238E2 /* ViewController.swift */,
 				708AB2641C125AE600B238E2 /* Main.storyboard */,
+				709C21721C2B216400EE3E13 /* purple-man-hi.png */,
+				709C21761C2B28CB00EE3E13 /* tipping_1492673c.jpg */,
 				708AB2671C125AE700B238E2 /* Assets.xcassets */,
 				708AB2691C125AE700B238E2 /* LaunchScreen.storyboard */,
 				708AB26C1C125AE700B238E2 /* Info.plist */,
@@ -232,9 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				709C21771C2B28CB00EE3E13 /* tipping_1492673c.jpg in Resources */,
 				708AB26B1C125AE700B238E2 /* LaunchScreen.storyboard in Resources */,
 				708AB2681C125AE700B238E2 /* Assets.xcassets in Resources */,
 				708AB2661C125AE600B238E2 /* Main.storyboard in Resources */,
+				709C21731C2B216400EE3E13 /* purple-man-hi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
