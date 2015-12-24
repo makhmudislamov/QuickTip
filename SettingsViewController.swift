@@ -70,7 +70,7 @@ class SettingsViewController: UIViewController {
                         let medTitle = Int(secTip * 100)
                         let highTitle = Int(thirdTip * 100)
         
-                        //TODO: update the tipSelectorControl with the default tip values
+                        
                         newTipControl.setTitle("\(lowTitle)%", forSegmentAtIndex: 0)
                         newTipControl.setTitle("\(medTitle)%", forSegmentAtIndex: 1)
                         newTipControl.setTitle("\(highTitle)%", forSegmentAtIndex: 2)
@@ -138,10 +138,7 @@ UIView.animateWithDuration(2, animations: { () -> Void in
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-//        NSUserDefaults.standardUserDefaults().setObject(String(lowtip), forKey: "lowtip")
-//        NSUserDefaults.standardUserDefaults().setObject(String(), forKey: "medtip")
-//        NSUserDefaults.standardUserDefaults().setObject(String(), forKey: "hightip")
-//        NSUserDefaults.standardUserDefaults().synchronize()
+
         
         
         print("view will disappear")
