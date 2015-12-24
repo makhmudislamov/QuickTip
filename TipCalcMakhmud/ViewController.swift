@@ -20,20 +20,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var split4Label: UILabel!
     
 
-//        
+    
     
 
      override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        
+    
         // Do any additional setup after loading the view, typically from a nib.
         
-        
-    
         
         
         tipLabel.text = "$0.00"
