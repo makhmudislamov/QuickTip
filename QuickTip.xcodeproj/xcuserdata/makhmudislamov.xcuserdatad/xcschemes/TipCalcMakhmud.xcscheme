@@ -17,7 +17,7 @@
                BlueprintIdentifier = "708AB25C1C125AE600B238E2"
                BuildableName = "TipCalcMakhmud.app"
                BlueprintName = "TipCalcMakhmud"
-               ReferencedContainer = "container:TipCalcMakhmud.xcodeproj">
+               ReferencedContainer = "container:QuickTip.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "708AB2701C125AE700B238E2"
                BuildableName = "TipCalcMakhmudTests.xctest"
                BlueprintName = "TipCalcMakhmudTests"
-               ReferencedContainer = "container:TipCalcMakhmud.xcodeproj">
+               ReferencedContainer = "container:QuickTip.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "708AB27B1C125AE700B238E2"
                BuildableName = "TipCalcMakhmudUITests.xctest"
                BlueprintName = "TipCalcMakhmudUITests"
-               ReferencedContainer = "container:TipCalcMakhmud.xcodeproj">
+               ReferencedContainer = "container:QuickTip.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "708AB25C1C125AE600B238E2"
             BuildableName = "TipCalcMakhmud.app"
             BlueprintName = "TipCalcMakhmud"
-            ReferencedContainer = "container:TipCalcMakhmud.xcodeproj">
+            ReferencedContainer = "container:QuickTip.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "708AB25C1C125AE600B238E2"
             BuildableName = "TipCalcMakhmud.app"
             BlueprintName = "TipCalcMakhmud"
-            ReferencedContainer = "container:TipCalcMakhmud.xcodeproj">
+            ReferencedContainer = "container:QuickTip.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "708AB25C1C125AE600B238E2"
             BuildableName = "TipCalcMakhmud.app"
             BlueprintName = "TipCalcMakhmud"
-            ReferencedContainer = "container:TipCalcMakhmud.xcodeproj">
+            ReferencedContainer = "container:QuickTip.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
