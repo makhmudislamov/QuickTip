@@ -181,8 +181,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="FadeControl" destination="Zos-IZ-OX0" id="DVu-1o-uP0"/>
-                        <outlet property="FadeLabel" destination="gXx-Rk-HG5" id="9o7-uu-GjW"/>
                         <outlet property="billField" destination="W7v-QA-dBg" id="rml-ox-vRa"/>
                         <outlet property="split2Label" destination="1LS-r1-XdQ" id="dco-Rv-CfG"/>
                         <outlet property="split3Label" destination="v42-0Y-WAL" id="vaf-97-18a"/>
@@ -209,6 +207,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images.jpg" id="yNM-XA-hDx">
+                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set DIfferent Default Tip Percentages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lt6-pu-BHw">
                                 <rect key="frame" x="17" y="102" width="286" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -275,6 +278,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="images.jpg" width="179" height="281"/>
         <image name="purple-man-hi.png" width="252" height="591"/>
         <image name="tipping_1492673c.jpg" width="257" height="460"/>
     </resources>
