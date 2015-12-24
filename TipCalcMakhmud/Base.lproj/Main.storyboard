@@ -207,12 +207,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images.jpg" id="yNM-XA-hDx">
-                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set DIfferent Default Tip Percentages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lt6-pu-BHw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Different Default Tip Percentages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lt6-pu-BHw">
                                 <rect key="frame" x="17" y="102" width="286" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
@@ -243,6 +238,11 @@
                                     <action selector="editingTips:" destination="Shh-QL-61V" eventType="valueChanged" id="Lke-Pl-v0Z"/>
                                 </connections>
                             </stepper>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bow1.jpg" id="dkn-e1-23Z">
+                                <rect key="frame" x="35" y="315" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -251,6 +251,7 @@
                     <connections>
                         <outlet property="newEditStepper" destination="yfy-c7-auJ" id="kiu-Ga-v6a"/>
                         <outlet property="newTipControl" destination="aaB-m7-Xrp" id="g40-Vi-QEI"/>
+                        <outlet property="waiterImage" destination="dkn-e1-23Z" id="r2q-l3-wci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNf-0E-4UE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -278,7 +279,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="images.jpg" width="179" height="281"/>
+        <image name="bow1.jpg" width="81" height="93"/>
         <image name="purple-man-hi.png" width="252" height="591"/>
         <image name="tipping_1492673c.jpg" width="257" height="460"/>
     </resources>
