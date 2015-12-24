@@ -10,18 +10,45 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    var counter = 1
+    
+    var timer = NSTimer()
+    
+    @IBOutlet weak var waiterImage: UIImageView!
+   
+
+    
     @IBOutlet weak var newTipControl: UISegmentedControl!
     
     @IBOutlet weak var newEditStepper: UIStepper!
     
-//    var firsTip = Float!
-//    var secTip = Float!
-//    var thirdTip = Float!
+    override func viewDidLayoutSubviews() {
+        
+        waiterImage.alpha = 0
+    }
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("doAnimation"), userInfo: nil, repeats: true)
+    }
+    
+    func doAnimation() {
+        
+        if counter == 8 {
+            counter = 1
+            
+        } else {
+            
+        counter++
+            
+        }
+        
+        waiterImage.image = UIImage(named: "bow\(counter).jpg")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -57,6 +84,16 @@ class SettingsViewController: UIViewController {
     
 
     @IBAction func newTipChangedC(sender: AnyObject) {
+        
+        if counter == 8 {
+            
+            counter = 1
+        } else {
+            
+            counter++
+        }
+        
+        waiterImage.image = UIImage(named: "bow\(counter).jpg")
     }
     
     
@@ -90,7 +127,10 @@ class SettingsViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-
+UIView.animateWithDuration(2, animations: { () -> Void in
+    self.waiterImage.alpha = 1
+    })
+        
         
         print("view did appear")
     }
