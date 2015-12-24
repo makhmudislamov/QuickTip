@@ -15,23 +15,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
-    @IBOutlet weak var FadeLabel: UILabel!
-    
-    @IBOutlet weak var FadeControl: UISegmentedControl!
-    
     @IBOutlet weak var split2Label: UILabel!
     @IBOutlet weak var split3Label: UILabel!
     @IBOutlet weak var split4Label: UILabel!
     
 
-    override func viewDidLoad() {
+//        
+    
+
+     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
-      
         
-        self.FadeLabel.alpha = 0
-        self.FadeControl.alpha = 1
         
+    
         
         
         tipLabel.text = "$0.00"
@@ -50,6 +52,9 @@ class ViewController: UIViewController {
         split3Label.text = defaults.stringForKey("savedS3")
         split4Label.text = defaults.stringForKey("savedS4")
         tipControl.selectedSegmentIndex = defaults.integerForKey("savedPercententage")
+        
+        
+        
         
         billField.becomeFirstResponder()
     }
@@ -76,11 +81,11 @@ class ViewController: UIViewController {
         
  
         
-        //TODO: update the tipSelectorControl with the default tip values
+        
         tipControl.setTitle("\(lowTitle)%", forSegmentAtIndex: 0)
         tipControl.setTitle("\(medTitle)%", forSegmentAtIndex: 1)
         tipControl.setTitle("\(highTitle)%", forSegmentAtIndex: 2)
-        //NSUserDefaults.standardUserDefaults().synchronize()
+        
 
         
         
@@ -95,13 +100,11 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(2.0, animations: { () -> Void in
-            self.FadeLabel.alpha = 1.0
-            self.FadeControl.alpha = 1.0
+        
             
             
         
-    })
+    
     }
     
     
@@ -194,6 +197,8 @@ class ViewController: UIViewController {
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }
+    
+   
 
 }
 
