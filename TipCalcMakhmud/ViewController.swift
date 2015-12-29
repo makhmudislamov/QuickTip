@@ -59,9 +59,12 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        syncTheCalc()
+        
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-        //TODO: read the 3 tip values from the defaults
+        
         let firstTip = userDefaults.floatForKey("lowtip")
         let secTip = userDefaults.floatForKey("medtip")
         let thirdTip = userDefaults.floatForKey("hightip")
@@ -95,10 +98,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        
-            
-            
-        
+    
     
     }
     
@@ -143,6 +143,12 @@ class ViewController: UIViewController {
     }
     @IBAction func onEditingChanged(sender: AnyObject) {
         
+        syncTheCalc()
+        
+    }
+    
+    func syncTheCalc() {
+    
         
         let defaults = NSUserDefaults.standardUserDefaults()
         
