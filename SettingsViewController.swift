@@ -57,7 +57,7 @@ class SettingsViewController: UIViewController {
         
                         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-                        //TODO: read the 3 tip values from the defaults
+        
                         let firstTip = userDefaults.doubleForKey("lowtip")
                         let secTip = userDefaults.doubleForKey("medtip")
                         let thirdTip = userDefaults.doubleForKey("hightip")
@@ -74,6 +74,7 @@ class SettingsViewController: UIViewController {
                         newTipControl.setTitle("\(lowTitle)%", forSegmentAtIndex: 0)
                         newTipControl.setTitle("\(medTitle)%", forSegmentAtIndex: 1)
                         newTipControl.setTitle("\(highTitle)%", forSegmentAtIndex: 2)
+        
                         NSUserDefaults.standardUserDefaults().synchronize()
         
         
@@ -82,18 +83,41 @@ class SettingsViewController: UIViewController {
         print("view will appear")
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animateWithDuration(2, animations: { () -> Void in
+            self.waiterImage.alpha = 1
+        })
+        
+        
+        print("view did appear")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        
+        
+        
+        print("view will disappear")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("view did disappear")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated
+        
+    }
+    
 
     @IBAction func newTipChangedC(sender: AnyObject) {
         
-        if counter == 8 {
-            
-            counter = 1
-        } else {
-            
-            counter++
-        }
-        
-        waiterImage.image = UIImage(named: "bow\(counter).jpg")
+
     }
     
     
@@ -121,39 +145,11 @@ class SettingsViewController: UIViewController {
         {
             userDefaults.setFloat(newFloatValue, forKey: "hightip")
         }
+        NSUserDefaults.standardUserDefaults().synchronize()
        
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-UIView.animateWithDuration(2, animations: { () -> Void in
-    self.waiterImage.alpha = 1
-    })
-        
-        
-        print("view did appear")
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-
-        
-        
-        print("view will disappear")
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("view did disappear")
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated
-        
-    }
+   
     
 
     /*
